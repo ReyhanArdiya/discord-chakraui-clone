@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import React, { useMemo } from "react";
-import getOS from "../../utils/getOS";
+import useOs from "../../hooks/useOs";
 import DiscordLogo from "../Icons/DiscordLogo";
 import { NavLink as INavLink, NavLinks } from "../Navbar/Navbar.interfaces";
 
@@ -56,6 +56,8 @@ const DrawerMenu = ({
 	isOpen,
 	onClose
 }: DrawerMenuProps) => {
+	const userOs = useOs();
+
 	const navLinkComps = useMemo(() => navLinks.map(({ href, text, isActive }, i) => <NavLink
 		href={href}
 		isActive={isActive}
@@ -89,7 +91,7 @@ const DrawerMenu = ({
 				<DrawerFooter justifyContent="left" p="6">
 					<Button size="sm" variant="brand">
 						<DownloadIcon mr="2" />
-						Download for {getOS()}
+						Download for {userOs}
 					</Button>
 				</DrawerFooter>
 			</DrawerContent>
