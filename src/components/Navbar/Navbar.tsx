@@ -23,11 +23,12 @@ const Navbar = ({ navLinks }: NavbarProps) => {
 			as="nav"
 			h={20}
 			justify="space-between"
-			left={0}
+			left="0"
 			maxW="page-max-width"
+			mx="auto"
 			pos="absolute"
 			px={6}
-			top={0}
+			right= "0"
 			w="full"
 			zIndex="overlay"
 		>
