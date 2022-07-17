@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import React, { useMemo } from "react";
+import getOS from "../../utils/getOS";
 import DiscordLogo from "../Icons/DiscordLogo";
 import { NavLink as INavLink, NavLinks } from "../Navbar/Navbar.interfaces";
 
@@ -49,7 +50,6 @@ export interface DrawerMenuProps extends Required<
 	navLinks: NavLinks;
 }
 
-// TODO add OS checker util
 // TODO make the navbar fade in on small? (might take too much time tho, probs gonna do this last)
 const DrawerMenu = ({
 	navLinks,
@@ -89,7 +89,7 @@ const DrawerMenu = ({
 				<DrawerFooter justifyContent="left" p="6">
 					<Button size="sm" variant="brand">
 						<DownloadIcon mr="2" />
-						Download for OS
+						Download for {getOS()}
 					</Button>
 				</DrawerFooter>
 			</DrawerContent>
