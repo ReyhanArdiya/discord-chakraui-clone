@@ -1,5 +1,6 @@
 import { HStack, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
+import React from "react";
 import { NavLink as INavLink, NavLinks } from "./Navbar.interfaces";
 
 export interface UncollapsedMenuProps {
@@ -29,4 +30,4 @@ const UncollapsedMenu = ({ navLinks }: UncollapsedMenuProps) => {
 	);
 };
 
-export default UncollapsedMenu;
+export default React.memo(UncollapsedMenu);

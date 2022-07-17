@@ -1,10 +1,9 @@
-// TODO use spacer
-// TODO use drawer
-
-import { Button, Flex, HStack, Link, Spacer, useMediaQuery, useTheme } from "@chakra-ui/react";
-
+import { Button, Flex, HStack, Link, Spacer, useDisclosure } from "@chakra-ui/react";
 import NextLink from "next/link";
+import React, { useMemo } from "react";
+import useIsLg from "../../hooks/useIsLg";
 import { ButtonSizes } from "../../theme/components/Button";
+import DrawerMenu from "../DrawerMenu/DrawerMenu";
 import DiscordLogo from "../Icons/DiscordLogo";
 import HamburgerIcon from "../Icons/HamburgerIcon";
 import UncollapsedMenu, { UncollapsedMenuProps } from "./UncollapsedMenu";
@@ -12,8 +11,11 @@ import UncollapsedMenu, { UncollapsedMenuProps } from "./UncollapsedMenu";
 export type NavbarProps = UncollapsedMenuProps;
 
 const Navbar = ({ navLinks }: NavbarProps) => {
-	const theme = useTheme();
-	const [ isLg ] = useMediaQuery(`(min-width: ${theme.breakpoints.lg})`);
+	const isLg = useIsLg();
+
+	const { isOpen, onOpen, onClose } = useDisclosure();
+
+	const memoizedNavLinks = useMemo(() => navLinks, [ navLinks ]);
 
 	return (
 		<Flex
@@ -30,13 +32,21 @@ const Navbar = ({ navLinks }: NavbarProps) => {
 					<DiscordLogo />
 				</Link>
 			</NextLink>
-			{isLg ? <UncollapsedMenu navLinks={navLinks}/> : <Spacer />}
+
+			{isLg ? <UncollapsedMenu navLinks={memoizedNavLinks} /> : <Spacer />}
+
 			<HStack align="center" spacing={4}>
 				<Button size={ButtonSizes.sm}>Login</Button>
-				{!isLg && <HamburgerIcon cursor="pointer"/>}
+				{!isLg && <HamburgerIcon cursor="pointer" onClick={onOpen}/>}
 			</HStack>
+
+			{!isLg && <DrawerMenu
+				isOpen={isOpen}
+				navLinks={memoizedNavLinks}
+				onClose={onClose}
+			/>}
 		</Flex>
 	);
 };
 
-export default Navbar;
+export default React.memo(Navbar);
