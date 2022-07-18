@@ -1,7 +1,5 @@
 import { DownloadIcon } from "@chakra-ui/icons";
 import {
-	AspectRatio,
-	AspectRatioProps,
 	Box,
 	BoxProps,
 	Button,
@@ -11,9 +9,7 @@ import {
 	Heading,
 	Spacer,
 	Stack,
-	Text,
-	VStack,
-	Wrap,
+	Text, Wrap,
 	WrapItem
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -58,9 +54,7 @@ const Clouds = (props: BoxProps) => (
 	</Box>
 );
 
-export interface HomeHeroProps {}
-
-const HomeHero = ({}: HomeHeroProps) => {
+const HomeHero = () => {
 	const userOs = useOs();
 
 	return (
