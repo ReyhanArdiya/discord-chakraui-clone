@@ -5,7 +5,7 @@ import useOs from "../../hooks/useOs";
 import { ContentSectionLayoutVariants } from "../../theme/components/ContentSectionLayout";
 import ContentSection from "./ContentSection";
 
-const Content = () => {
+const HomeContent = () => {
 	const userOs = useOs();
 
 	return (
@@ -153,4 +153,4 @@ const Content = () => {
 	);
 };
 
-export default Content;
+export default HomeContent;
