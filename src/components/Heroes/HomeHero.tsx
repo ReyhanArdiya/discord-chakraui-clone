@@ -62,6 +62,7 @@ const HomeHero = () => {
 			bgColor="brand.50"
 			flexDirection="column"
 			minH="626px"
+			overflow="hidden"
 			pos="relative"
 			w="full"
 		>

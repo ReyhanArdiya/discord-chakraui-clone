@@ -2,6 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 import breakpoints from "./breakpoints";
 import colors from "./colors";
 import Button from "./components/Button";
+import ContentSectionLayout from "./components/ContentSectionLayout";
 import Heading from "./components/Heading";
 import Text from "./components/Text";
 import fonts from "./fonts";
@@ -22,7 +23,8 @@ const theme = extendTheme({
 	components : {
 		Button,
 		Heading,
-		Text
+		Text,
+		ContentSectionLayout
 	},
 });
 
