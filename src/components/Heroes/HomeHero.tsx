@@ -29,26 +29,31 @@ const ChillShoes = (props: BoxProps) => (
 	</Box>
 );
 
-const ChillDrinks = (props: AspectRatioProps) => (
-	<AspectRatio {...props}>
+const ChillDrinks = (props: BoxProps) => (
+	<Box boxSize="max-content" {...props}>
 		<Image
 			alt="chill-drinks"
-			layout="fill"
-			objectFit="cover"
+			height={360}
+			layout="intrinsic"
 			src="/images/c40c84ca18d84633a9d86b4046a91437.svg"
+			width={615}
 		/>
-	</AspectRatio>
+	</Box>
 );
 
-const Clouds = (props: AspectRatioProps) => (
-	<AspectRatio {...props}>
+const Clouds = (props: BoxProps) => (
+	<Box boxSize="max-content" {...props}>
 		<Image
 			alt="clouds"
-			layout="fill"
-			objectFit="cover"
+			height={626}
+			layout="intrinsic"
 			src="/images/e6d57714479874c665b36c7adee76b1d.svg"
+			style={{
+				maxWidth : "none"
+			}}
+			width={2560}
 		/>
-	</AspectRatio>
+	</Box>
 );
 
 export interface HomeHeroProps {}
@@ -57,9 +62,19 @@ const HomeHero = ({}: HomeHeroProps) => {
 	const userOs = useOs();
 
 	return (
-		<Center bgColor="brand.50" flexDirection="column" minH="626px" pos="relative" w="full">
-			<Spacer flexShrink={0} minH="80px"/>
+		<Center
+			bgColor="brand.50"
+			flexDirection="column"
+			minH="626px"
+			pos="relative"
+			w="full"
+		>
+			<Spacer flexShrink={0} minH="80px" />
 			<Grid
+				alignSelf={{
+					base : "flex-start",
+					lg   : "center"
+				}}
 				justifyItems="center"
 				maxW={`${850 / 16}rem`}
 				my="14"
@@ -74,13 +89,13 @@ const HomeHero = ({}: HomeHeroProps) => {
 					base : "full",
 					lg   : "70%"
 				}}
+				zIndex={2}
 			>
 				<GridItem
 					colSpan={{
 						base : 4,
 						lg   : 5
 					}}
-
 					w="full"
 				>
 					<Heading as="h1" color="white" size="h1" variant="heavy">
@@ -108,6 +123,7 @@ const HomeHero = ({}: HomeHeroProps) => {
 				</GridItem>
 
 				<GridItem colSpan={{ base : 5 }} w="full">
+					{/* TODO use wrap and wrapitem for buttons */}
 					<Stack
 						direction={{
 							base : "column",
@@ -116,7 +132,11 @@ const HomeHero = ({}: HomeHeroProps) => {
 						justify="center"
 						spacing="6"
 					>
-						<Button maxW={`${259 / 16}rem`} w="91.18%" whiteSpace="normal">
+						<Button
+							maxW={`${259 / 16}rem`}
+							w="91.18%"
+							whiteSpace="normal"
+						>
 							<DownloadIcon mr="2" />
 							Download for {userOs}
 						</Button>
@@ -132,7 +152,59 @@ const HomeHero = ({}: HomeHeroProps) => {
 				</GridItem>
 			</Grid>
 
-			<ChillShoes ml="-40"/>
+			<Stack
+				boxSize="full"
+				h="max-content"
+				lineHeight={0}
+				maxH="684px"
+				maxW="1024px"
+				minH="100px"
+				pos= "relative"
+				zIndex={0}
+			>
+				<Clouds
+					bottom="0"
+					display={{
+						base : "none",
+						md   : "block"
+					}}
+					left={{
+						md : `${-810 / 16}rem`,
+						lg : `${-720 / 16}rem`
+					}}
+					mx="auto !important"
+					pos="absolute"
+					right="0"
+					w="max-content"
+				/>
+				<ChillShoes
+					bottom="0"
+					display={{
+						md : "none",
+						lg : "block"
+					}}
+					ml="-20 !important"
+					pos={{
+						lg : "absolute"
+					}}
+					right={{
+						lg : "51%"
+					}}
+
+				/>
+				<ChillDrinks
+					bottom="0"
+					display={{
+						base : "none",
+						md   : "block"
+					}}
+					left={{
+						base : "40%",
+						lg   : "86.5%"
+					}}
+					pos="absolute"
+				/>
+			</Stack>
 		</Center>
 	);
 };
