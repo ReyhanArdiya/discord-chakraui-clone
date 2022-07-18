@@ -1,13 +1,12 @@
-import { Center, VStack } from "@chakra-ui/react";
 import { type NextPage } from "next";
+import HomeHero from "../components/Heroes/HomeHero";
 
 const HomePage: NextPage = () => {
 	return (
-		<Center bg="gray.300" h="100vh" w="100vw">
-			<VStack boxSize="full" spacing="14">
+		<>
+			<HomeHero/>
 
-			</VStack>
-		</Center>
+		</>
 	);
 };
 

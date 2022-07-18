@@ -3,8 +3,9 @@ import { ComponentStyleConfig } from "@chakra-ui/react";
 export enum TextVariants {
 
 }
-export enum TextSizes {
 
+export enum TextSizes {
+	RESPONSIVE = "responsive"
 }
 
 const Text: ComponentStyleConfig = {
@@ -15,6 +16,17 @@ const Text: ComponentStyleConfig = {
 		fontStyle  : "normal",
 		lineHeight : "tall"
 	},
+	sizes : {
+		[TextSizes.RESPONSIVE] : {
+			fontSize : {
+				base : "md",
+				lg   : "xl"
+			}
+		}
+	},
+	defaultProps : {
+		size : TextSizes.RESPONSIVE
+	}
 };
 
 export default Text;
