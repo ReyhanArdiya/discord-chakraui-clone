@@ -9,6 +9,7 @@ import {
 	Grid,
 	GridItem,
 	Heading,
+	Spacer,
 	Stack,
 	Text,
 	VStack
@@ -17,7 +18,7 @@ import Image from "next/image";
 import useOs from "../../hooks/useOs";
 
 const ChillShoes = (props: BoxProps) => (
-	<Box bottom="0" left={{ base : "-20" }} pos="absolute" w="full" {...props}>
+	<Box w="full" {...props}>
 		<Image
 			alt="chill-shoes"
 			height={352}
@@ -56,15 +57,17 @@ const HomeHero = ({}: HomeHeroProps) => {
 	const userOs = useOs();
 
 	return (
-		<Center bgColor="brand.50" minH="626px" pos="relative" w="full">
-			{/* <ChillShoes /> */}
+		<Center bgColor="brand.50" flexDirection="column" minH="626px" pos="relative" w="full">
+			<Spacer flexShrink={0} minH="80px"/>
 			<Grid
 				justifyItems="center"
 				maxW={`${850 / 16}rem`}
+				my="14"
 				px={{
 					base : "6",
 					md   : "10"
 				}}
+				rowGap="6"
 				templateColumns="repeat(5, 1fr)"
 				textAlign={{ lg : "center" }}
 				w={{
@@ -77,6 +80,7 @@ const HomeHero = ({}: HomeHeroProps) => {
 						base : 4,
 						lg   : 5
 					}}
+
 					w="full"
 				>
 					<Heading as="h1" color="white" size="h1" variant="heavy">
@@ -84,11 +88,15 @@ const HomeHero = ({}: HomeHeroProps) => {
 					</Heading>
 				</GridItem>
 
-				<GridItem colSpan={{
-					base : 5,
-					md   : 3,
-					lg   : 5
-				}}
+				<GridItem
+					colSpan={{
+						base : 5,
+						md   : 3,
+						lg   : 5
+					}}
+					mt={{
+						md : "26px"
+					}}
 				>
 					<Text color="white">
 						...where you can belong to a school club, a gaming
@@ -106,7 +114,7 @@ const HomeHero = ({}: HomeHeroProps) => {
 							lg   : "row"
 						}}
 						justify="center"
-						spacing="7"
+						spacing="6"
 					>
 						<Button maxW={`${259 / 16}rem`} w="91.18%" whiteSpace="normal">
 							<DownloadIcon mr="2" />
@@ -123,6 +131,8 @@ const HomeHero = ({}: HomeHeroProps) => {
 					</Stack>
 				</GridItem>
 			</Grid>
+
+			<ChillShoes ml="-40"/>
 		</Center>
 	);
 };
