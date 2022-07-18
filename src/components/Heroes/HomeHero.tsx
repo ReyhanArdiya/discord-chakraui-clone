@@ -12,7 +12,9 @@ import {
 	Spacer,
 	Stack,
 	Text,
-	VStack
+	VStack,
+	Wrap,
+	WrapItem
 } from "@chakra-ui/react";
 import Image from "next/image";
 import useOs from "../../hooks/useOs";
@@ -77,7 +79,11 @@ const HomeHero = ({}: HomeHeroProps) => {
 				}}
 				justifyItems="center"
 				maxW={`${850 / 16}rem`}
-				my="14"
+				my={{
+					base : "14",
+					// md   : "20",
+					// lg   : `${120 / 16}rem`
+				}}
 				px={{
 					base : "6",
 					md   : "10"
@@ -123,32 +129,40 @@ const HomeHero = ({}: HomeHeroProps) => {
 				</GridItem>
 
 				<GridItem colSpan={{ base : 5 }} w="full">
-					{/* TODO use wrap and wrapitem for buttons */}
-					<Stack
+					<Wrap
 						direction={{
-							base : "column",
-							lg   : "row"
+							md : "column",
+							lg : "row"
 						}}
-						justify="center"
+						justify={{
+							base : "start",
+							lg   : "center"
+						}}
 						spacing="6"
 					>
-						<Button
+						<WrapItem
 							maxW={`${259 / 16}rem`}
-							w="91.18%"
-							whiteSpace="normal"
+							w="78.5%"
 						>
-							<DownloadIcon mr="2" />
-							Download for {userOs}
-						</Button>
-						<Button
-							display="block"
-							maxW={`${316 / 16}rem`}
-							variant="dark"
-							whiteSpace="normal"
-						>
-							Open Discord in your browser
-						</Button>
-					</Stack>
+							<Button
+								w="full"
+								whiteSpace="normal"
+							>
+								<DownloadIcon mr="2" />
+								Download for {userOs}
+							</Button>
+						</WrapItem>
+						<WrapItem w="max-content">
+							<Button
+								display="block"
+								maxW={`${316 / 16}rem`}
+								variant="dark"
+								whiteSpace="normal"
+							>
+								Open Discord in your browser
+							</Button>
+						</WrapItem>
+					</Wrap>
 				</GridItem>
 			</Grid>
 
