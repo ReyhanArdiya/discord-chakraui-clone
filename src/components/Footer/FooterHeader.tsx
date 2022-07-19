@@ -9,8 +9,6 @@ import langs from "../../../public/locales/index.json";
 import LanguageMenu from "../LanguageMenu/LanguageMenu";
 
 const FooterHeader = () => {
-	console.log(langs);
-
 	return (
 		<VStack align="start" justify="start" spacing={6}>
 			<Heading
