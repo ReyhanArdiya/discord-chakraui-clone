@@ -35,7 +35,7 @@ const FooterList = ({ title, links }: FooterListProps) => {
 
 	return (
 		<VStack align="start" fontSize="md" fontWeight="normal">
-			<UnorderedList spacing="2">
+			<UnorderedList m="0" spacing="2">
 				<ListItem listStyleType="none">
 					<Heading as="h4" color="brand.0" fontSize="inherit" fontWeight="inherit">
 						{title}
