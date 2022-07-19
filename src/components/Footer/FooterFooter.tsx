@@ -15,7 +15,7 @@ const FooterFooter = () => (
 	>
 		<DiscordLogo />
 		<Button size={ButtonSizes.sm} variant="brand">
-					Sign up
+					Download
 		</Button>
 	</Flex>
 );
