@@ -26,6 +26,13 @@ const theme = extendTheme({
 		Text,
 		ContentSectionLayout
 	},
+	styles : {
+		global : {
+			"*" : {
+				"-webkit-tap-highlight-color" : "transparent"
+			}
+		}
+	}
 });
 
 export default theme;
