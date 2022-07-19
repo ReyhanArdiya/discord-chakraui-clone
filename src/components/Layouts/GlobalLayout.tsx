@@ -1,5 +1,6 @@
 import { ReactNode, useMemo } from "react";
 import useIsLg from "../../hooks/useIsLg";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { NavLinks } from "../Navbar/Navbar.interfaces";
 
@@ -51,6 +52,7 @@ const GlobalLayout = ({ children }: GlobalLayoutProps) => {
 		<>
 			<Navbar navLinks={navLinks} />
 			{children}
+			<Footer/>
 		</>
 	);
 };
