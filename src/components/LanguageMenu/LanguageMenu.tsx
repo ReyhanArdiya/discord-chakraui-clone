@@ -33,7 +33,7 @@ const LanguageMenu = ({ selectedLang, langs }: LanguageMenuProps) => {
 	</Box>);
 
 	return (
-		<Popover isLazy>
+		<Popover isLazy placement="top">
 			<PopoverTrigger>
 				<HStack cursor="pointer" fontSize={`${14 / 16}rem`} spacing={0}>
 					<Language
