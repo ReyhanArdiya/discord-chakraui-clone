@@ -37,7 +37,7 @@ const HomeContent = () => {
 	);
 
 	return (
-		<Box as="section" bg={bgColor1} id="content">
+		<Box as="main" bg={bgColor1} id="content">
 			<ContentSection
 				bg={bgColor1}
 				color={color1}

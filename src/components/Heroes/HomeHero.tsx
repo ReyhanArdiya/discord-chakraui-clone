@@ -59,6 +59,7 @@ const HomeHero = () => {
 
 	return (
 		<Center
+			as="header"
 			bgColor="brand.50"
 			flexDirection="column"
 			minH="626px"
