@@ -1,6 +1,18 @@
+export enum Colors {
+	BRAND = "brand",
+	GREYPLE = "greyple",
+	DARK_NOT_BLACK = "dark-not-black",
+	FOCUS_BORDER = "focus-border",
+	STATUS_GREEN = "status-green",
+	TEXT_LINK = "text-link",
+	OFF_WHITE = "off-white",
+	NOT_QUITE_BLACK = "not-quite-black",
+	EKKO_RED = "ekko-red"
+}
+
 // CMT key 0 means it is the original color from discord's website
 const colors = {
-	brand : {
+	[Colors.BRAND] : {
 		"0"   : "#5865f2",
 		"50"  : "#404eed",
 		"100" : "#BDC2FA",
@@ -13,7 +25,7 @@ const colors = {
 		"800" : "#070F5F",
 		"900" : "#04072F"
 	},
-	greyple : {
+	[Colors.GREYPLE] : {
 		"0"   : "#99aab5",
 		"50"  : "#F0F3F4",
 		"100" : "#D6DDE1",
@@ -26,7 +38,7 @@ const colors = {
 		"800" : "#2B353B",
 		"900" : "#151A1E"
 	},
-	"dark-not-black" : {
+	[Colors.DARK_NOT_BLACK] : {
 		"0"   : "#2c2f33",
 		"50"  : "#F1F2F3",
 		"100" : "#D9DBDE",
@@ -39,7 +51,7 @@ const colors = {
 		"800" : "#2F3237",
 		"900" : "#18191B"
 	},
-	"focus-border" : {
+	[Colors.FOCUS_BORDER] : {
 		"0"   : "#00b0f4",
 		"50"  : "#E5F8FF",
 		"100" : "#B8EBFF",
@@ -52,7 +64,7 @@ const colors = {
 		"800" : "#004A66",
 		"900" : "#002533"
 	},
-	"status-green" : {
+	[Colors.STATUS_GREEN] : {
 		"0"   : "#43b581",
 		"50"  : "#ECF8F3",
 		"100" : "#CBECDD",
@@ -65,7 +77,7 @@ const colors = {
 		"800" : "#1C4A35",
 		"900" : "#0E251B"
 	},
-	"text-link" : {
+	[Colors.TEXT_LINK] : {
 		"0"   : "#00b0f4",
 		"50"  : "#E5F8FF",
 		"100" : "#B8EBFF",
@@ -78,7 +90,7 @@ const colors = {
 		"800" : "#004A66",
 		"900" : "#002533"
 	},
-	"off-white" : {
+	[Colors.OFF_WHITE] : {
 		"0"   : "#f6f6f6",
 		"50"  : "#F2F2F2",
 		"100" : "#DBDBDB",
@@ -91,7 +103,7 @@ const colors = {
 		"800" : "#333333",
 		"900" : "#1A1A1A"
 	},
-	"not-quite-black" : {
+	[Colors.NOT_QUITE_BLACK] : {
 		"0"   : "#23272a",
 		"50"  : "#F1F2F3",
 		"100" : "#D8DCDF",
@@ -104,7 +116,7 @@ const colors = {
 		"800" : "#2E3438",
 		"900" : "#171A1C"
 	},
-	"ekko-red" : {
+	[Colors.EKKO_RED] : {
 		"0"   : "#de2761",
 		"50"  : "#FCE9EF",
 		"100" : "#F6C1D2",

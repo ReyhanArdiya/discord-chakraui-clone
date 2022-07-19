@@ -3,9 +3,11 @@ import Image, { ImageProps } from "next/image";
 import { ReactNode } from "react";
 import useSlideFadeAnimation from "../../hooks/useSlideFadeAnimation";
 import { HeadingSizes } from "../../theme/components/Heading";
-import ContentSectionLayout, { ContentSectionLayoutProps } from "../Layouts/ContentSectionLayout";
+import ContentSectionLayout, {
+	ContentSectionLayoutProps
+} from "../Layouts/ContentSectionLayout";
 
-export interface ContentSectionProps extends ContentSectionLayoutProps{
+export interface ContentSectionProps extends ContentSectionLayoutProps {
 	image: ImageProps;
 	children: ReactNode;
 	title: string;
@@ -24,7 +26,7 @@ const ContentSection = ({
 	return (
 		<StyledSlideFade>
 			<ContentSectionLayout w="full" {...rest}>
-				<Image alt={alt} {...imageProps}/>
+				<Image alt={alt} {...imageProps} />
 				<VStack
 					maxW={{ lg : `${380 / 16}rem` }}
 					spacing="6"
@@ -33,10 +35,15 @@ const ContentSection = ({
 						lg   : "44.5%"
 					}}
 				>
-					<Heading as="h2" size={HeadingSizes.H2} w="full">
+					<Heading
+						as="h2"
+						color="inherit"
+						size={HeadingSizes.H2}
+						w="full"
+					>
 						{title}
 					</Heading>
-					<Text w="ffull" >
+					<Text color="inherit" w="ffull">
 						{children}
 					</Text>
 				</VStack>
