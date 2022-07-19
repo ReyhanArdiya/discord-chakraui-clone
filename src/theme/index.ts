@@ -7,6 +7,7 @@ import Heading from "./components/Heading";
 import Text from "./components/Text";
 import fonts from "./fonts";
 import gradients from "./gradients";
+import semanticColors from "./semantic-tokens/semantic-colors";
 import shadows from "./shadows";
 import sizes from "./sizes";
 import spacing from "./spacing";
@@ -32,6 +33,9 @@ const theme = extendTheme({
 				"-webkit-tap-highlight-color" : "transparent"
 			}
 		}
+	},
+	semanticTokens : {
+		colors : semanticColors
 	}
 });
 
