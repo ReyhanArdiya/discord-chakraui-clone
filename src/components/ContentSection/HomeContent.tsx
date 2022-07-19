@@ -2,11 +2,13 @@ import { DownloadIcon } from "@chakra-ui/icons";
 import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import useOs from "../../hooks/useOs";
+import useSlideFadeAnimation from "../../hooks/useSlideFadeAnimation";
 import { ContentSectionLayoutVariants } from "../../theme/components/ContentSectionLayout";
 import ContentSection from "./ContentSection";
 
 const HomeContent = () => {
 	const userOs = useOs();
+	const StyledSlideFade = useSlideFadeAnimation();
 
 	return (
 		<Box as="section" id="content">
@@ -58,97 +60,99 @@ const HomeContent = () => {
 					channels, and more.
 			</ContentSection>
 
-			<VStack
-				bg="off-white.0"
-				px={{
-					base : "6",
-					md   : "10",
-					lg   : "20"
-				}}
-				py={{
-					base : "14",
-					md   : "20",
-					lg   : "40"
-				}}
-				textAlign={{
-					base : "left",
-					md   : "center"
-				}}
-			>
-				<Heading as="h2" size="h2" variant="heavy">
+			<StyledSlideFade>
+				<VStack
+					bg="off-white.0"
+					px={{
+						base : "6",
+						md   : "10",
+						lg   : "20"
+					}}
+					py={{
+						base : "14",
+						md   : "20",
+						lg   : "40"
+					}}
+					textAlign={{
+						base : "left",
+						md   : "center"
+					}}
+				>
+					<Heading as="h2" size="h2" variant="heavy">
 						Reliable tech for staying close
-				</Heading>
-				<Text mt="6 !important">
-						Low-latency voice and video feels like you’re in the
+					</Heading>
+					<Text mt="6 !important">
+						Low-latency voice and video feels like you&#x2019;re in the
 						same room. Wave hello over video, watch friends stream
 						their games, or gather up and have a drawing session
 						with screen share.
-				</Text>
-				<Box
-					mt={{
-						base : "6 !important",
-						lg   : "4 !important"
+					</Text>
+					<Box
+						mt={{
+							base : "6 !important",
+							lg   : "4 !important"
+						}}
+					>
+						<Image
+							alt="group-example"
+							height={530}
+							layout="intrinsic"
+							src="/images/98ea5b9e92e304c7d352ac462996adc5.svg"
+							width={874}
+						/>
+					</Box>
+				</VStack>
+
+				<VStack
+					bg="off-white.0"
+					overflow="hidden"
+					pb={{
+						base : "14",
+						md   : "20",
+						lg   : `${120 / 16}rem`
+					}}
+					pos="relative"
+					px={{
+						base : "6",
+						md   : "10",
+						lg   : "20"
+					}}
+					spacing="10"
+					textAlign={{
+						base : "left",
+						md   : "center"
 					}}
 				>
-					<Image
-						alt="group-example"
-						height={530}
-						layout="intrinsic"
-						src="/images/98ea5b9e92e304c7d352ac462996adc5.svg"
-						width={874}
-					/>
-				</Box>
-			</VStack>
-
-			<VStack
-				bg="off-white.0"
-				overflow="hidden"
-				pb={{
-					base : "14",
-					md   : "20",
-					lg   : `${120 / 16}rem`
-				}}
-				pos="relative"
-				px={{
-					base : "6",
-					md   : "10",
-					lg   : "20"
-				}}
-				spacing="10"
-				textAlign={{
-					base : "left",
-					md   : "center"
-				}}
-			>
-				<Box pos="absolute" w="max-content">
-					<Image
-						alt="group-example"
-						height={49}
-						layout="intrinsic"
-						src="/images/a188414ce83f2454b9d71a47c3d95909.svg"
-						width={531}
-					/>
-				</Box>
-				<Heading
-					as="h2"
-					fontSize={`${32 / 16}rem`}
-					mt={`${30 / 16}rem !important`}
-					size="h2"
-					variant="regular"
-				>
+					<Box pos="absolute" w="max-content">
+						<Image
+							alt="group-example"
+							height={49}
+							layout="intrinsic"
+							src="/images/a188414ce83f2454b9d71a47c3d95909.svg"
+							width={531}
+						/>
+					</Box>
+					<Heading
+						as="h2"
+						fontSize={`${32 / 16}rem`}
+						mt={`${30 / 16}rem !important`}
+						size="h2"
+						variant="regular"
+					>
 						Ready to start your journey?
-				</Heading>
+					</Heading>
 
-				<Button
-					maxW={`${259 / 16}rem`}
-					variant="brand"
-					w="full"
-					whiteSpace="normal"
-				>
-					<DownloadIcon mr="2" />
+					<Button
+						maxW={`${259 / 16}rem`}
+						variant="brand"
+						w="full"
+						whiteSpace="normal"
+					>
+						<DownloadIcon mr="2" />
 						Download for {userOs}
-				</Button>
-			</VStack>
+					</Button>
+				</VStack>
+			</StyledSlideFade>
 		</Box>
 	);
 };
