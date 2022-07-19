@@ -1,4 +1,4 @@
-import { Heading, HStack, Icon, StackItem, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Icon, VStack } from "@chakra-ui/react";
 import {
 	FaFacebookSquare,
 	FaInstagram,
@@ -12,7 +12,7 @@ const FooterHeader = () => {
 	console.log(langs);
 
 	return (
-		<VStack justify="start" spacing={6}>
+		<VStack align="start" justify="start" spacing={6}>
 			<Heading
 				as="h3"
 				color="brand.0"
@@ -22,20 +22,17 @@ const FooterHeader = () => {
 				Imagine a place
 			</Heading>
 
-			<StackItem w="full">
-				<LanguageMenu
-					langs={langs}
-					selectedLang={{
-						image : {
-							src : "/images/e6d6b255259ac878d00819a9555072ad.png"
-						},
-						name : "English, USA"
-					}}
-				/>
-			</StackItem>
+			<LanguageMenu
+				langs={langs}
+				selectedLang={{
+					image : {
+						src : "/images/e6d6b255259ac878d00819a9555072ad.png"
+					},
+					name : "English, USA"
+				}}
+			/>
 
 			<HStack
-				as={StackItem}
 				color="off-white.0"
 				id="social-medias"
 				spacing="6"
