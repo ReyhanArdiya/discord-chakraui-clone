@@ -17,7 +17,7 @@ const ContentSection = ({
 	...rest
 }: ContentSectionProps) => {
 	const { alt, ...imageProps } = image;
-
+	// TODO add fade in animation
 	return (
 		<ContentSectionLayout w="full" {...rest}>
 			<Image alt={alt} {...imageProps}/>

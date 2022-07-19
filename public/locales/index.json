@@ -1,0 +1,176 @@
+[
+	{
+		"image": {
+			"src": "https://discord.com/assets/d24e290703f8b31b56744a69df613fcb.png"
+		},
+		"name": "български"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/44a7840b2161275358742595c9257e76.png"
+		},
+		"name": "Čeština"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/3590df6f2ae2f7202dab15c0bd3aca9a.png"
+		},
+		"name": "Dansk"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/7fa2adf98f26db34178bb30a63dabe8c.png"
+		},
+		"name": "Deutsch"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/d19290ba3158e138bb241ae669a3bc37.png"
+		},
+		"name": "Ελληνικά"
+	},
+	{
+		"image": {
+			"src": "/images/e6d6b255259ac878d00819a9555072ad.png"
+		},
+		"name": "English, USA"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/10bb7b2e55f0a34f23d903121de6b9bc.png"
+		},
+		"name": "Español"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/02e75e392ab5d5a8ed5ab4f8fcae9c77.png"
+		},
+		"name": "Suomi"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/8d1d548a64761f0c5b1d7c9e00ae66a6.png"
+		},
+		"name": "Français"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/78cbfbf0381b8c7f5a192c4a46bd0b0e.png"
+		},
+		"name": "हिंदी"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/cfc9643cb00e44fae64bfeda3556bfd9.png"
+		},
+		"name": "Hrvatski"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/08d0c70a708cd25acecb7a8b0cb0eb23.png"
+		},
+		"name": "Magyar"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/cbf50c2e3287d2118f741e827a3ddaf5.png"
+		},
+		"name": "Italiano"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/f23c5c28c4429691f7c54af93876d661.png"
+		},
+		"name": "日本語"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/ab02db863b7edeaa46bf4cd49b6646a9.png"
+		},
+		"name": "한국어"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/7eb9487d4dac00095f8ed2d2c80b21a8.png"
+		},
+		"name": "Lietuviškai"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/c9f51873ae719a6b4b8c6724362e999e.png"
+		},
+		"name": "Nederlands"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/fcdf14841cd468de3f43704be16fa303.png"
+		},
+		"name": "Norwegian"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/894cceea2dd5b523936930d1d7e333c5.png"
+		},
+		"name": "Polski"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/7beab7b17eaa9ff7ceed3e5b1af274c2.png"
+		},
+		"name": "Português do Brasil"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/d5073ab2ca9ee7c06c3f4d761968ac44.png"
+		},
+		"name": "Română"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/64f37efd5319b9b581557604864f042a.png"
+		},
+		"name": "Русский"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/2ac1239c26c4ae1d27817a9d7b85dc53.png"
+		},
+		"name": "Svenska"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/da07da4bde6f81f16366b62e8fcc90ec.png"
+		},
+		"name": "ไทย"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/8e1cf1f1cf2a1a917002b8b583270c32.png"
+		},
+		"name": "Türkçe"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/d52ce383ca6d8eb53588bcc042574cae.png"
+		},
+		"name": "Українська"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/b1309f8892f138383d8b0b6ff8e23463.png"
+		},
+		"name": "Tiếng Việt"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/b2da62f020089ccee92860e4defafdb4.png"
+		},
+		"name": "中文"
+	},
+	{
+		"image": {
+			"src": "https://discord.com/assets/4db0790f7a81e49025d7fbfb9aeb182c.png"
+		},
+		"name": "繁體中文"
+	}
+]
