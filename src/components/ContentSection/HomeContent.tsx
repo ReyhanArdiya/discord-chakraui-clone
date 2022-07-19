@@ -1,8 +1,16 @@
 import { DownloadIcon } from "@chakra-ui/icons";
-import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+	Box,
+	Button,
+	Heading,
+	Text,
+	useColorModeValue,
+	VStack
+} from "@chakra-ui/react";
 import Image from "next/image";
 import useOs from "../../hooks/useOs";
 import useSlideFadeAnimation from "../../hooks/useSlideFadeAnimation";
+import { Colors } from "../../theme/colors";
 import { ContentSectionLayoutVariants } from "../../theme/components/ContentSectionLayout";
 import ContentSection from "./ContentSection";
 
@@ -10,9 +18,29 @@ const HomeContent = () => {
 	const userOs = useOs();
 	const StyledSlideFade = useSlideFadeAnimation();
 
+	const bgColor1 = useColorModeValue(
+		"white",
+		`${Colors.NOT_QUITE_BLACK}.0`
+	);
+	const color1 = useColorModeValue(
+		`${Colors.NOT_QUITE_BLACK}.0`,
+		`${Colors.OFF_WHITE}.0`
+	);
+
+	const bgColor2 = useColorModeValue(
+		`${Colors.OFF_WHITE}.0`,
+		`${Colors.BRAND}.0`,
+	);
+	const downloadButtonVariant = useColorModeValue(
+		"brand",
+		"light"
+	);
+
 	return (
-		<Box as="section" id="content">
+		<Box as="section" bg={bgColor1} id="content">
 			<ContentSection
+				bg={bgColor1}
+				color={color1}
 				image={{
 					alt    : "chat-example",
 					height : 440,
@@ -22,13 +50,14 @@ const HomeContent = () => {
 				}}
 				title="Create an invite-only place where you belong"
 			>
-					Discord servers are organized into topic-based channels
-					where you can collaborate, share, and just talk about your
-					day without clogging up a group chat.
+				Discord servers are organized into topic-based channels where
+				you can collaborate, share, and just talk about your day without
+				clogging up a group chat.
 			</ContentSection>
 
 			<ContentSection
-				bg="off-white.0"
+				bg={bgColor2}
+				color={color1}
 				image={{
 					alt    : "voices-example",
 					height : 440,
@@ -39,12 +68,14 @@ const HomeContent = () => {
 				title="Where hanging out is easy"
 				variant={ContentSectionLayoutVariants.REVERSE}
 			>
-					Grab a seat in a voice channel when you&#x2019;re free.
-					Friends in your server can see you&#x2019;re around and
-					instantly pop in to talk without having to call.
+				Grab a seat in a voice channel when you&#x2019;re free. Friends
+				in your server can see you&#x2019;re around and instantly pop in
+				to talk without having to call.
 			</ContentSection>
 
 			<ContentSection
+				bg={bgColor1}
+				color={color1}
 				image={{
 					alt    : "users-example",
 					height : 440,
@@ -55,14 +86,14 @@ const HomeContent = () => {
 				title="From few to a fandom
 					"
 			>
-					Get any community running with moderation tools and custom
-					member access. Give members special powers, set up private
-					channels, and more.
+				Get any community running with moderation tools and custom
+				member access. Give members special powers, set up private
+				channels, and more.
 			</ContentSection>
 
 			<StyledSlideFade>
 				<VStack
-					bg="off-white.0"
+					bg={bgColor2}
 					px={{
 						base : "6",
 						md   : "10",
@@ -78,14 +109,14 @@ const HomeContent = () => {
 						md   : "center"
 					}}
 				>
-					<Heading as="h2" size="h2" variant="heavy">
+					<Heading as="h2" color={color1} size="h2" variant="heavy">
 						Reliable tech for staying close
 					</Heading>
-					<Text mt="6 !important">
-						Low-latency voice and video feels like you&#x2019;re in the
-						same room. Wave hello over video, watch friends stream
-						their games, or gather up and have a drawing session
-						with screen share.
+					<Text color={color1} mt="6 !important">
+						Low-latency voice and video feels like you&#x2019;re in
+						the same room. Wave hello over video, watch friends
+						stream their games, or gather up and have a drawing
+						session with screen share.
 					</Text>
 					<Box
 						mt={{
@@ -104,7 +135,8 @@ const HomeContent = () => {
 				</VStack>
 
 				<VStack
-					bg="off-white.0"
+					bg={bgColor2}
+					color={color1}
 					overflow="hidden"
 					pb={{
 						base : "14",
@@ -134,6 +166,7 @@ const HomeContent = () => {
 					</Box>
 					<Heading
 						as="h2"
+						color={color1}
 						fontSize={`${32 / 16}rem`}
 						mt={`${30 / 16}rem !important`}
 						size="h2"
@@ -144,7 +177,7 @@ const HomeContent = () => {
 
 					<Button
 						maxW={`${259 / 16}rem`}
-						variant="brand"
+						variant={downloadButtonVariant}
 						w="full"
 						whiteSpace="normal"
 					>
