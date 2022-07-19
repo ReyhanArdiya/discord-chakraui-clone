@@ -1,6 +1,7 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
 import Image, { ImageProps } from "next/image";
 import { ReactNode } from "react";
+import useSlideFadeAnimation from "../../hooks/useSlideFadeAnimation";
 import { HeadingSizes } from "../../theme/components/Heading";
 import ContentSectionLayout, { ContentSectionLayoutProps } from "../Layouts/ContentSectionLayout";
 
@@ -17,26 +18,30 @@ const ContentSection = ({
 	...rest
 }: ContentSectionProps) => {
 	const { alt, ...imageProps } = image;
-	// TODO add fade in animation
+
+	const StyledSlideFade = useSlideFadeAnimation();
+
 	return (
-		<ContentSectionLayout w="full" {...rest}>
-			<Image alt={alt} {...imageProps}/>
-			<VStack
-				maxW={{ lg : `${380 / 16}rem` }}
-				spacing="6"
-				w={{
-					base : "full",
-					lg   : "44.5%"
-				}}
-			>
-				<Heading as="h2" size={HeadingSizes.H2} w="full">
-					{title}
-				</Heading>
-				<Text w="ffull" >
-					{children}
-				</Text>
-			</VStack>
-		</ContentSectionLayout>
+		<StyledSlideFade>
+			<ContentSectionLayout w="full" {...rest}>
+				<Image alt={alt} {...imageProps}/>
+				<VStack
+					maxW={{ lg : `${380 / 16}rem` }}
+					spacing="6"
+					w={{
+						base : "full",
+						lg   : "44.5%"
+					}}
+				>
+					<Heading as="h2" size={HeadingSizes.H2} w="full">
+						{title}
+					</Heading>
+					<Text w="ffull" >
+						{children}
+					</Text>
+				</VStack>
+			</ContentSectionLayout>
+		</StyledSlideFade>
 	);
 };
 
